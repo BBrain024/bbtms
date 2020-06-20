@@ -72,12 +72,9 @@ include('includes/config.php');
         <!-- Content Row -->
         <form name="donar" method="post">
 <div class="row">
-
-
-
 <div class="col-lg-4 mb-4">
 <div class="font-italic">Blood Group<span style="color:red">*</span> </div>
-<div><select name="bloodgroup" class="form-control" required>
+<div><select name="bloodgroup" class="form-control" required><option selected="selected" value="" hidden="">Select</option>
 <?php $sql = "SELECT * from  tblbloodgroup ";
 $query = $dbh -> prepare($sql);
 $query->execute();
@@ -96,7 +93,7 @@ foreach($results as $result)
 
 <div class="col-lg-4 mb-4">
 <div class="font-italic">Location </div>
-<div><textarea class="form-control" name="     location"></textarea></div>
+<div><textarea class="form-control" name="location"></textarea></div>
 </div>
 
 </div>
@@ -134,7 +131,7 @@ foreach($results as $result)
                     <a href="#"><img class="card-img-top img-fluid" src="images/blood-donor.jpg" alt="" ></a>
                     <div class="card-block">
                         <h4 class="card-title"><a href="#"><?php echo htmlentities($result->FullName);?></a></h4>
-                        <p class="card-text"><b>Mobile No. / Email Id :</b> <?php echo htmlentities($result->MobileNumber);?> /
+                        <p class="card-text"><b>Mobile No. / Email  :</b> <?php echo htmlentities($result->MobileNumber);?> /
                         <?php if($result->EmailId=="")
                         {
                         echo htmlentities(NA);
@@ -143,7 +140,7 @@ echo htmlentities($result->EmailId);
 }
 ?>
                              </p>
-<p class="card-text"><b>  Gender :</b> <?php echo htmlentities($result->Gender);?></p>
+<p class="card-text"><b> Gender :</b> <?php echo htmlentities($result->Gender);?></p>
 <p class="card-text"><b> Age:</b> <?php echo htmlentities($result->Age);?></p>
 <p class="card-text"><b>Blood Group :</b> <?php echo htmlentities($result->BloodGroup);?></p>
 <p class="card-text"><b>Address :</b>                  

@@ -69,7 +69,6 @@ $("#loaderIcon").hide();
 error:function (){}
 });
 }
-// This is the code oo for adding doctors
 </script>
 	</head>
 	<body>
@@ -123,7 +122,7 @@ error:function (){}
 while($row=mysqli_fetch_array($ret))
 {
 ?>
-																<option value="<?php echo htmlentities($row['id']);?>">
+																<option value="<?php echo htmlentities($row['specilization']);?>">
 																	<?php echo htmlentities($row['specilization']);?>
 																</option>
 																<?php } ?>

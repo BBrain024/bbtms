@@ -1,5 +1,5 @@
 <?php 
-include('includes/config.php');
+include('includes/config2.php');
 if(isset($_POST['Save']))
   {
 $Dname=$_POST['Dname'];
@@ -10,9 +10,9 @@ $tag=$_POST['tag'];
 $Bvolume=$_POST['Bvolume'];
 $Cdate=$_POST['Cdate'];
 $Edate=$_POST['Edate'];
-$Tele='+233'.$_POST['Tele'];
+$Tele=$_POST['Tele'];
 $status=1;
-$sql="INSERT INTO  bld_rec(Name of Donor,Name of Collector,Place of Collection,Blood Type,Blood Tag number,Blood Volume,Date of collection,Date of Expiry,Tele,status) VALUES(:Dname,:Cname,:Pcol,:Btype,:tag,:Bvolume,:Cdate,:Edate,:Tele;:status)";
+$sql="INSERT INTO  bld_rec(Name_of_Donor,Name_of_Collector,Place_of_Collection,Blood_Type,Blood_Tag_number,Blood_Volume,Date_of_collection,Date_of_Expiry,tele,status) VALUES(:Dname,:Cname,:Pcol,:Btype,:tag,:Bvolume,:Cdate,:Edate,:Tele;:status)";
 $query = $dbh->prepare($sql);
 $query->bindParam(':Dname',$Dname,PDO::PARAM_STR);
 $query->bindParam(':Cname',$Cname,PDO::PARAM_STR);
@@ -28,7 +28,8 @@ $query->execute();
 $lastInsertId = $dbh->lastInsertId();
 if($lastInsertId)
 {
-$msg="Your info submitted successfully";
+$msg="Your info uploaded successfully";
+header("collection-reg.php");
 }
 else 
 {
@@ -124,7 +125,7 @@ $error="Something went wrong. Please try again";
 				<td>Blood Type:<span style="color:red">*</span><br><br></td>
 				<td><select name="Btype"><option selected="selected" value="" hidden="">Select</option>
                                        <?php $sql = "SELECT * from  tblbloodgroup ";
-                                      $query = $dbh -> prepare($sql);
+                                      $query = $dbh2 -> prepare($sql);
                                       $query->execute();
                                       $results=$query->fetchAll(PDO::FETCH_OBJ);
                                       $cnt=1;
@@ -134,7 +135,7 @@ $error="Something went wrong. Please try again";
                                            {               ?>  
                                        <option value="<?php echo htmlentities($result->BloodGroup);?>"><?php echo htmlentities($result->BloodGroup);?></option>
                                             <?php }} ?>
-				</select></td>
+				</select><br><br></td>
                 
 			</tr>
 

@@ -4,9 +4,7 @@ session_start();
 include('includes/configg.php');
 include('includes/checklogin.php');
 check_login();
-// smoke this is the code for makin appointment
-//what exactly be the problem?
-//make I bell u make I explain give u sure 
+
 if(isset($_POST['submit']))
 {
 $specilization=$_POST['Doctorspecialization'];
@@ -17,10 +15,6 @@ $appdate=$_POST['appdate'];
 $time=$_POST['apptime'];
 $userstatus=1;
 $docstatus=1;
-
-//open the browser which loads the page kk
-
-
 $query=mysqli_query($con,"insert into appointment(doctorSpecialization,doctorId,userId,consultancyFees,appointmentDate,appointmentTime,userStatus,doctorStatus) values('$specilization','$doctorid','$userid','$fees','$appdate','$time','$userstatus','$docstatus')");
 	if($query)
 	{
@@ -50,19 +44,14 @@ $query=mysqli_query($con,"insert into appointment(doctorSpecialization,doctorId,
 		<link rel="stylesheet" href="assets/css/themes/theme-1.css" id="skin_color" />
 		<script>
 function getdoctor(val) {
-	// $.ajax({
-	// type: "POST",
-	// url: "get_doctor.php",
-	// data:'specilizationid='+val,
-	// success: function(data){
-	// 	$("#doctor").html(data);
-	// }
-	// });
-
-$.get("get_doctor.php", {"specializationid": val}, function(data) {
-	consloe.log(data)
-})
-
+	$.ajax({
+	type: "POST",
+	url: "get_doctor.php",
+	data:'specilizationid='+val,
+	success: function(data){
+		$("#doctor").html(data);
+	}
+	});
 }
 </script>	
 
@@ -78,8 +67,10 @@ function getfee(val) {
 	}
 	});
 }
-//Hope is cul now? test for the browser ad see if tis worksin kk
-</script>
+</script>	
+
+
+
 
 	</head>
 	<body>
@@ -133,7 +124,7 @@ function getfee(val) {
 							<select name="Doctorspecialization" class="form-control" onChange="getdoctor(this.value);" required="required">
 																<option value="">Select Specialization</option>
 <?php $ret=mysqli_query($con,"select * from doctorspecilization");
-while($row=mysqli_fetch_array($ret)) //your doctorspecilization get id field? yh
+while($row=mysqli_fetch_array($ret))
 {
 ?>
 																<option value="<?php echo htmlentities($row['id']);?>">

@@ -138,7 +138,7 @@ $error="Something went wrong. Please try again";
 
 <div class="col-lg-4 mb-4">
 <div class="font-italic">Blood Group<span style="color:red">*</span> </div>
-<div><select name="bloodgroup" class="form-control" required>
+<div><select name="bloodgroup" class="form-control" required><option selected="selected" value="" hidden="">Select</option>
 <?php $sql = "SELECT * from  tblbloodgroup ";
 $query = $dbh -> prepare($sql);
 $query->execute();

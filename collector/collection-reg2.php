@@ -1,5 +1,5 @@
 <?php
-include('includes/config 2.php');
+include('includes/config2.php');
 if(isset($_POST['Save']))
   {
 $Dname=$_POST['Dname'];
@@ -9,23 +9,25 @@ $Otype=$_POST['Otype'];
 $tag=$_POST['tag'];
 $Cdate=$_POST['Cdate'];
 $Edate=$_POST['Edate'];
+$Tele=$_POST['Tele'];
 $status=1;
-$sql="INSERT INTO  org_rec(Name of Donor,Name of Collector,Place of Collection,Blood Type,Blood Tag number,Date of collection,Date of Expiry,status) VALUES(:Dname,:Cname,:Pcol,:Btype,:tag,:Cdate,:Edate,:status)";
+$sql="INSERT INTO  org_rec(Name_of_Donor,Name_of_Collector,Place_of_Collection,Organ_Type,Organ_Tag_number,Date_of_collection,Date_of_Expiry,tele,status) VALUES(:Dname,:Cname,:Pcol,:Otype,:tag,:Cdate,:Edate,:Tele:status)";
 $query = $dbh->prepare($sql);
 $query->bindParam(':Dname',$Dname,PDO::PARAM_STR);
 $query->bindParam(':Cname',$Cname,PDO::PARAM_STR);
 $query->bindParam(':Pcol',$Pcol,PDO::PARAM_STR);
-$query->bindParam(':Btype',$Btype,PDO::PARAM_STR);
+$query->bindParam(':Otype',$Otype,PDO::PARAM_STR);
 $query->bindParam(':tag',$tag,PDO::PARAM_STR);
-$query->bindParam('Bvolume',$Bvolume,PDO::PARAM_STR);
 $query->bindParam(':Cdate',$Cdate,PDO::PARAM_STR);
 $query->bindParam(':Edate',$Edate,PDO::PARAM_STR);
+$query->bindParam(':Tele',$Tele,PDO::PARAM_STR);
 $query->bindParam(':status',$status,PDO::PARAM_STR);
 $query->execute();
 $lastInsertId = $dbh->lastInsertId();
 if($lastInsertId)
 {
-$msg="Your info submitted successfully";
+$msg="Your info uploaded successfully";
+header("collection-reg2.php");
 }
 else 
 {
@@ -142,6 +144,12 @@ $error="Something went wrong. Please try again";
 			<tr>
 				<td>Date of Collection:<span style="color:red">*</span><br><br><br></td>
 				<td><input type="Date" name="Cdate" required><br><br><br></td>
+			</tr>
+			
+			<tr>
+				<td>Telephone No:<span style="color:red">*</span><br><br><br></td>
+				<td><input type="Tele" name="Tele" required><br><br><br>
+				</td>
 			</tr>
 			
 				<tr>
