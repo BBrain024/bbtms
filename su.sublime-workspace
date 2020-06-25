@@ -1,0 +1,736 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"in",
+				"index"
+			],
+			[
+				"_SE",
+				"_SELF"
+			],
+			[
+				"or",
+				"organ"
+			],
+			[
+				"l",
+				"link\tTag"
+			],
+			[
+				"te",
+				"textarea\tTag"
+			],
+			[
+				"for",
+				"form\tTag"
+			],
+			[
+				"min",
+				"min-height\tproperty"
+			],
+			[
+				"tra",
+				"transform\tproperty"
+			],
+			[
+				"a",
+				"auto\twidth"
+			],
+			[
+				"mi",
+				"min-height\tproperty"
+			],
+			[
+				"m",
+				"max-width\tproperty"
+			],
+			[
+				"tr",
+				"translate()\ttransform"
+			],
+			[
+				"el",
+				"else"
+			],
+			[
+				"_",
+				"_SELF"
+			],
+			[
+				"sc",
+				"script"
+			],
+			[
+				"ex",
+				"exit"
+			],
+			[
+				"Re",
+				"Registration"
+			],
+			[
+				"text",
+				"text-decoration\tproperty"
+			],
+			[
+				"t",
+				"td\tTag"
+			],
+			[
+				"Co",
+				"Confirmpass"
+			],
+			[
+				"C",
+				"Confirmpass"
+			],
+			[
+				"P",
+				"P_word"
+			],
+			[
+				"R",
+				"Region"
+			],
+			[
+				"F",
+				"Female"
+			],
+			[
+				"se",
+				"self"
+			],
+			[
+				"q",
+				"qualification"
+			],
+			[
+				"su",
+				"surgeon"
+			],
+			[
+				"s",
+				"surgeon"
+			],
+			[
+				"S",
+				"Surgeon"
+			],
+			[
+				"G",
+				"Gender"
+			],
+			[
+				"d",
+				"div\tTag"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"h",
+				"html\thtml"
+			],
+			[
+				"ba",
+				"background-color\tproperty"
+			],
+			[
+				"di",
+				"display\tproperty"
+			],
+			[
+				"tex",
+				"text-decoration\tproperty"
+			],
+			[
+				"inl",
+				"inline-block\tdisplay"
+			],
+			[
+				"texr",
+				"text-transform\tproperty"
+			],
+			[
+				"r",
+				"rgb()\tbackground"
+			],
+			[
+				"b",
+				"bottom\tproperty"
+			],
+			[
+				"ovw",
+				"overflow\tproperty"
+			],
+			[
+				"box-",
+				"box-sizing\tproperty"
+			],
+			[
+				"ali",
+				"align-items\tproperty"
+			],
+			[
+				"p",
+				"position\tproperty"
+			],
+			[
+				"c",
+				"cursor\tproperty"
+			],
+			[
+				"fo",
+				"font-family\tproperty"
+			],
+			[
+				"co",
+				"cover\tbackground-size"
+			],
+			[
+				"bac",
+				"background-color\tproperty"
+			],
+			[
+				"u",
+				"ul\tTag"
+			],
+			[
+				"lo",
+				"loop\tAttr"
+			],
+			[
+				"v",
+				"video\tTag"
+			],
+			[
+				"msql_",
+				"msql_connect"
+			],
+			[
+				"ma",
+				"margin-bottom\tproperty"
+			],
+			[
+				"pa",
+				"padding\tproperty"
+			],
+			[
+				"padd",
+				"padding-top\tproperty"
+			],
+			[
+				"i",
+				"img\tTag"
+			],
+			[
+				"li",
+				"link\tTag"
+			],
+			[
+				"bord",
+				"border-radius\tproperty"
+			],
+			[
+				"bo",
+				"border-radius\tproperty"
+			],
+			[
+				"font-s",
+				"font-size\tproperty"
+			],
+			[
+				"D",
+				"donor"
+			],
+			[
+				"SL",
+				"SL_1"
+			],
+			[
+				"SL_",
+				"SL_3"
+			],
+			[
+				"Sl",
+				"SL_4"
+			],
+			[
+				"o",
+				"opacity\tproperty"
+			],
+			[
+				"margi",
+				"margin-top\tproperty"
+			],
+			[
+				"back",
+				"background-position\tproperty"
+			],
+			[
+				"backgr",
+				"background-image\tproperty"
+			],
+			[
+				"ani",
+				"animation-delay\tproperty"
+			],
+			[
+				"am",
+				"animation\tproperty"
+			],
+			[
+				"dl",
+				"display\tproperty"
+			],
+			[
+				"RE",
+				"Register"
+			],
+			[
+				"ch",
+				"changeImg"
+			],
+			[
+				"ti",
+				"time"
+			],
+			[
+				"al",
+				"text-align\tproperty"
+			],
+			[
+				"fl",
+				"float\tproperty"
+			],
+			[
+				"aut",
+				"autofocus\tAttr"
+			],
+			[
+				"margin",
+				"margin-left\tproperty"
+			],
+			[
+				"translate",
+				"translateX()\ttransform"
+			],
+			[
+				"pad",
+				"padding\tproperty"
+			],
+			[
+				"background-c",
+				"background-color\tproperty"
+			],
+			[
+				"re",
+				"required\tAttr"
+			],
+			[
+				"opt",
+				"option\tTag"
+			],
+			[
+				"op",
+				"option\tTag"
+			],
+			[
+				"paddi",
+				"padding-left\tproperty"
+			],
+			[
+				"bor",
+				"border-radius\tproperty"
+			],
+			[
+				"f",
+				"figure\tTag"
+			],
+			[
+				"shad",
+				"box-shadow\tproperty"
+			],
+			[
+				"background",
+				"background-color\tproperty"
+			],
+			[
+				"marg",
+				"margin-left\tproperty"
+			],
+			[
+				"font-",
+				"font-style\tproperty"
+			],
+			[
+				"fonts",
+				"font-style\tproperty"
+			],
+			[
+				"backg",
+				"background-image\tproperty"
+			],
+			[
+				"mar",
+				"margin\tproperty"
+			],
+			[
+				"align",
+				"text-align\tproperty"
+			],
+			[
+				"col",
+				"color\tproperty"
+			],
+			[
+				"fon",
+				"font-family\tproperty"
+			],
+			[
+				"im",
+				"background-image\tproperty"
+			],
+			[
+				"wi",
+				"width\tproperty"
+			],
+			[
+				"dec",
+				"text-decoration\tproperty"
+			],
+			[
+				"clo",
+				"color\tproperty"
+			],
+			[
+				"font",
+				"font-size\tproperty"
+			],
+			[
+				"me",
+				"meta\tTag"
+			],
+			[
+				"H",
+				"H2\tTag"
+			],
+			[
+				"po",
+				"position\tproperty"
+			],
+			[
+				"bacg",
+				"background-image\tproperty"
+			],
+			[
+				"st",
+				"style\tTag"
+			],
+			[
+				"A",
+				"Aposa"
+			],
+			[
+				"L",
+				"LAb"
+			],
+			[
+				"ac",
+				"action\tAttr"
+			],
+			[
+				"cell",
+				"cellspacing\tAttr"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/xampp2/htdocs/Blood Bank and Organ Transplanting system/bloodbank and transplanting management system/bbtms/Maps/location.php",
+		"/C/xampp2/htdocs/Blood Bank and Organ Transplanting system/bloodbank and transplanting management system/bbtms/includes/become-donar2.php",
+		"/C/xampp2/htdocs/Blood Bank and Organ Transplanting system/bloodbank and transplanting management system/bbtms/admin/Organ Trans/manage-bloodgroup.php",
+		"/C/xampp2/htdocs/Project Codes/search.php",
+		"/C/xampp2/htdocs/Blood Bank and Organ Transplanting system/bloodbank and transplanting management system/bbtms/sms.php",
+		"/F/w3school offline web/www.w3schools.com/php/demo_form_validation_complete.php",
+		"/C/xampp2/htdocs/Blood Bank and Organ Transplanting system/bloodbank and transplanting management system/bbtms/admin/css/style.css",
+		"/C/xampp2/htdocs/Blood Bank and Organ Transplanting system/bloodbank and transplanting management system/bbtms/admin/css/css/vars.css",
+		"/C/xampp2/htdocs/Blood Bank and Organ Transplanting system/bloodbank and transplanting management system/bbtms/admin/index.php",
+		"/C/Users/Biggy Brain/AppData/Local/Temp/Rar$DIa1520.39998/SignUp.php",
+		"/C/xampp2/htdocs/Blood Bank and Organ Transplanting system/bloodbank and transplanting management system/bbtms/Final year Project/Homepage/index.php",
+		"/C/xampp/htdocs/Final year Project/Homepage/style.css",
+		"/C/xampp/htdocs/Final year Project/Login/login.php",
+		"/C/xampp/htdocs/Final year Project/Homepage/index.php",
+		"/C/xampp/htdocs/Final year Project/wp.css",
+		"/C/xampp/htdocs/Blood Bank and Organ Transplanting system/bloodbank and transplanting management system/bbtms/includes/footer.php",
+		"/C/xampp/htdocs/Blood Bank and Organ Transplanting system/bloodbank and transplanting management system/bbtms/includes/dbconnect.php",
+		"/C/xampp/htdocs/Blood Bank and Organ Transplanting system/bloodbank and transplanting management system/bbtms/includes/header.php",
+		"/C/xampp/htdocs/Blood Bank and Organ Transplanting system/bloodbank and transplanting management system/bbtms/page.php",
+		"/C/xampp/htdocs/Blood Bank and Organ Transplanting system/bloodbank and transplanting management system/bbtms/contact.php",
+		"/C/xampp/htdocs/Blood Bank and Organ Transplanting system/bloodbank and transplanting management system/bbtms/become-donar.php",
+		"/C/xampp/htdocs/Blood Bank and Organ Transplanting system/bloodbank and transplanting management system/bbtms/search-donor.php",
+		"/C/xampp/htdocs/Blood Bank and Organ Transplanting system/bloodbank and transplanting management system/bbtms/css/modern-business.css",
+		"/C/xampp/htdocs/Blood Bank and Organ Transplanting system/bloodbank and transplanting management system/bbtms/css/su.css",
+		"/C/xampp/htdocs/Blood Bank and Organ Transplanting system/bloodbank and transplanting management system/bbtms/css/main.css",
+		"/C/xampp/htdocs/Blood Bank and Organ Transplanting system/bloodbank and transplanting management system/bbtms/admin/index.php",
+		"/C/xampp/htdocs/Project Codes/Home.php",
+		"/C/xampp/htdocs/Project Codes/Home.css",
+		"/C/xampp/htdocs/Project Codes/SignUp.Css",
+		"/C/xampp/htdocs/Blood Bank and Organ Transplanting system/bloodbank and transplanting management system/bbtms/su.php",
+		"/C/xampp/htdocs/Blood Bank and Organ Transplanting system/bloodbank and transplanting management system/bbtms/li.php",
+		"/C/xampp/htdocs/Blood Bank and Organ Transplanting system/bloodbank and transplanting management system/bbtms/homepage.php",
+		"/C/xampp/htdocs/Project Codes/main.php",
+		"/C/xampp/htdocs/Blood Bank and Organ Transplanting system/bloodbank and transplanting management system/bbtms/Final year Project/li.php",
+		"/C/xampp/htdocs/Blood Bank and Organ Transplanting system/bloodbank and transplanting management system/bbtms/index.php",
+		"/C/xampp/htdocs/Blood Bank and Organ Transplanting system/bloodbank and transplanting management system/bbtms/Final year Project/Choose.php",
+		"/C/xampp/htdocs/Blood Bank and Organ Transplanting system/bloodbank and transplanting management system/bbtms/Final year Project/choose2.php",
+		"/C/xampp/htdocs/Final year Project/Welcomepage/index.php",
+		"/C/xampp/htdocs/Final year Project/choose2.php",
+		"/C/xampp/htdocs/index.php",
+		"/C/xampp/htdocs/Final year Project/Choose.php",
+		"/C/xampp/htdocs/Blood Bank and Organ Transplanting system/bloodbank and transplanting management system/bbtms/Maps/index.php",
+		"/C/Users/Biggy Brain/AppData/Local/Temp/Rar$DIa13468.45740/Home.php",
+		"/C/Users/Biggy Brain/AppData/Local/Temp/Rar$DIa13468.45036/Home.php",
+		"/C/xampp/htdocs/Blood Bank/bloodbank and transplanting management system/bbtms/index.php",
+		"/C/xampp/htdocs/Blood Bank/bloodbank and donar management system/bbdms/css/modern-business.css",
+		"/C/xampp/htdocs/Blood Bank/bloodbank and donar management system/bbdms/includes/config.php",
+		"/C/xampp/htdocs/Blood Bank/bloodbank and donar management system/bbdms/includes/header.php",
+		"/C/xampp/htdocs/Blood Bank/bloodbank and donar management system/bbdms/admin/css/font-awesome.min.css",
+		"/C/xampp/htdocs/Blood Bank/bloodbank and donar management system/bbdms/includes/footer.php",
+		"/C/xampp/htdocs/Blood Bank/bloodbank and donar management system/bbdms/mail/contact_me.php",
+		"/C/xampp/htdocs/Blood Bank/bloodbank and donar management system/bbdms/page.php",
+		"/C/xampp/htdocs/Blood Bank/bloodbank and donar management system/bbdms/index.php",
+		"/C/Users/Biggy Brain/AppData/Local/Temp/Rar$DIa1028.29903/A_login.php",
+		"/C/Users/Biggy Brain/Desktop/Project Codes/A_page.php",
+		"/C/Users/Biggy Brain/Desktop/Doctor Hayfron/main.css",
+		"/C/Users/Biggy Brain/Desktop/Doctor Hayfron/About.html",
+		"/C/Users/Biggy Brain/Desktop/Doctor Hayfron/bootstrap/css/bootstrap.css",
+		"/C/Users/Biggy Brain/Desktop/Doctor Hayfron/Donation/css/style.css",
+		"/C/Users/Biggy Brain/Desktop/Doctor Hayfron/bootstrap.min.css",
+		"/C/Users/Biggy Brain/Desktop/Doctor Hayfron/bootstrap/css/bootstrap.min.css",
+		"/C/Users/Biggy Brain/Desktop/Doctor Hayfron/login.css",
+		"/C/Users/Biggy Brain/Desktop/Doctor Hayfron/Login.html",
+		"/C/Users/Biggy Brain/Desktop/CSM 399/projects.html",
+		"/C/Users/Biggy Brain/Desktop/CSM 399/style.css",
+		"/I/New folder/sign up.html",
+		"/C/xampp2/phpMyAdmin/config.inc.php",
+		"/I/New folder/style.css",
+		"/C/Users/Biggy Brain/Desktop/Mini Project/wewewe.php",
+		"/C/Users/Biggy Brain/Desktop/Mini Project/Ashanti.html",
+		"/C/Users/Biggy Brain/Desktop/Mini Project/Brain&&Ziggy Hotel Search.html",
+		"/C/Users/Biggy Brain/Desktop/CHURCH/List.html",
+		"/C/Users/Biggy Brain/Desktop/CHURCH/LAb.html",
+		"/I/New folder/index.html",
+		"/C/Users/Biggy Brain/Desktop/CHURCH/Lab 1b.html",
+		"/C/Users/Biggy Brain/Desktop/Mini Project/selection.html",
+		"/C/Users/Biggy Brain/Desktop/CSM 399/grades.html",
+		"/C/Users/Biggy Brain/Desktop/CSM 399/Bohyen.html",
+		"/C/xampp2/htdocs/work/wewewe.php",
+		"/C/Users/Biggy Brain/Desktop/Mini Project/Index.html",
+		"/C/Users/Biggy Brain/Desktop/Mini Project/Accra.html",
+		"/C/Users/Biggy Brain/Desktop/Mini Project/Northern.html",
+		"/C/Users/Biggy Brain/Desktop/Mini Project/Brain.html",
+		"/C/Users/Biggy Brain/Desktop/Mini Project/Western.html",
+		"/C/Users/Biggy Brain/Desktop/Mini Project/Central.html",
+		"/C/Users/Biggy Brain/Desktop/Mini Project/Design.css",
+		"/C/Users/Biggy Brain/Desktop/Mini Project/head.html",
+		"/C/Users/Biggy Brain/Desktop/Mini Project/West.html",
+		"/C/Users/Biggy Brain/Desktop/Mini Project/East.html",
+		"/C/Users/Biggy Brain/Desktop/Mini Project/Ahafo.html",
+		"/C/Users/Biggy Brain/Desktop/Mini Project/Eastern.html",
+		"/C/Users/Biggy Brain/Desktop/Mini Project/Volta.html",
+		"/C/Users/Biggy Brain/Desktop/Bohyen Project/List.html",
+		"/C/Users/Biggy Brain/Desktop/Samuel Adu-sarfo (6825416)/dis.css",
+		"/C/Users/Biggy Brain/Desktop/Samuel Adu-sarfo (6825416)/Frames.html",
+		"/C/Users/Biggy Brain/Desktop/Bohyen Project/design.css",
+		"/E/[Smad-Cage]/cv.docx.dav",
+		"/C/Users/Biggy Brain/Desktop/Bohyen Project/Beginning.php",
+		"/C/Users/Biggy Brain/Desktop/Bohyen Project/Bohyen.html",
+		"/C/Users/Biggy Brain/Desktop/Company/page.html",
+		"/C/Users/Biggy Brain/Desktop/Company/welcome.html",
+		"/C/Users/Biggy Brain/Desktop/Company/contact.html",
+		"/C/Users/Biggy Brain/Desktop/Company/Announcement.html",
+		"/C/Users/Biggy Brain/Desktop/Company/style.css",
+		"/C/Users/Biggy Brain/Desktop/Company/Title.html",
+		"/C/Users/Biggy Brain/Desktop/Company/Product.html",
+		"/C/Users/Biggy Brain/Desktop/Company/History.html",
+		"/C/Users/Biggy Brain/Desktop/Company/Lframe.html",
+		"/C/Users/Biggy Brain/Desktop/Company/Frames.html",
+		"/C/Users/Biggy Brain/Desktop/Bohyen Project/A_title.html",
+		"/C/Users/Biggy Brain/Desktop/Bohyen Project/Announcements.html",
+		"/C/Users/Biggy Brain/Desktop/brain/lab/Brain.html",
+		"/C/Users/Biggy Brain/Desktop/brain/lab/Frames.html",
+		"/C/Users/Biggy Brain/Desktop/Bohyen Project/Style.css",
+		"/C/Users/Biggy Brain/Desktop/Bohyen Project/Local.html",
+		"/C/Users/Biggy Brain/Desktop/brain/lab/PROJECT.html",
+		"/C/Users/Biggy Brain/Desktop/brain/lab/dis.css",
+		"/C/Users/Biggy Brain/Desktop/brain/lab/Home.html",
+		"/C/Users/Biggy Brain/Desktop/brain/lab/Contact.html",
+		"/C/Users/Biggy Brain/Desktop/brain/lab/List.html",
+		"/C/Users/Biggy Brain/Desktop/brain/lab/Frame.html",
+		"/C/Users/Biggy Brain/Desktop/brain/lab/Title.html",
+		"/C/Users/Biggy Brain/Desktop/Bohyen Project/Nehemiah.html",
+		"/C/Users/Biggy Brain/Desktop/Bohyen Project/Home.html",
+		"/C/Users/Biggy Brain/Desktop/CSM 399/timetable.html",
+		"/C/Users/Biggy Brain/Desktop/Bohyen Project/PROJECT.html",
+		"/C/Users/Biggy Brain/Desktop/Bohyen Project/Course.html",
+		"/C/Users/Biggy Brain/Desktop/CSM 399/programmes.html"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "su.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 223.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
