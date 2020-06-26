@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 25, 2020 at 09:36 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.1
+-- Host: localhost
+-- Generation Time: Jun 26, 2020 at 05:08 PM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -56,10 +56,10 @@ CREATE TABLE `appointment` (
   `consultancyFees` int(11) DEFAULT NULL,
   `appointmentDate` varchar(255) DEFAULT NULL,
   `appointmentTime` varchar(255) DEFAULT NULL,
-  `postingDate` timestamp NULL DEFAULT current_timestamp(),
+  `postingDate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `userStatus` int(11) DEFAULT NULL,
   `doctorStatus` int(11) DEFAULT NULL,
-  `updationDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
+  `updationDate` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -115,15 +115,15 @@ INSERT INTO `b_collector` (`id`, `Name`, `uniqueID`, `Email`, `gender`, `departm
 
 CREATE TABLE `doctors` (
   `id` int(11) NOT NULL,
-  `specilization` varchar(255) DEFAULT NULL,
+  `specilization` int(11) DEFAULT NULL,
   `doctorName` varchar(255) DEFAULT NULL,
-  `address` longtext DEFAULT NULL,
+  `address` longtext,
   `docFees` varchar(255) DEFAULT NULL,
   `contactno` bigint(11) DEFAULT NULL,
   `docEmail` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
-  `creationDate` timestamp NULL DEFAULT current_timestamp(),
-  `updationDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
+  `creationDate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `updationDate` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -131,8 +131,8 @@ CREATE TABLE `doctors` (
 --
 
 INSERT INTO `doctors` (`id`, `specilization`, `doctorName`, `address`, `docFees`, `contactno`, `docEmail`, `password`, `creationDate`, `updationDate`) VALUES
-(1, 'Heart surgeon', 'Dr.Robert Akwante', 'Santasi-Kumasi', 'GHS 1200', 245768248, 'kakwante22@gmail.com', '9dc59f9065e8b288e3b7a570555a13eb', '2020-05-21 23:51:24', NULL),
-(13, 'Lung surgeon', 'Dr.Emmanuel Asante', 'Abrepo-Kumasi', 'GHS 1000', 547958766, 'easante11@gmail.com', '9dc59f9065e8b288e3b7a570555a13eb', '2020-06-08 01:40:41', NULL);
+(1, 1, 'Dr.Robert Akwante', 'Santasi-Kumasi', 'GHS 1200', 245768248, 'kakwante22@gmail.com', '9dc59f9065e8b288e3b7a570555a13eb', '2020-05-21 23:51:24', '2020-06-26 14:36:35'),
+(13, 1, 'Dr.Emmanuel Asante', 'Abrepo-Kumasi', 'GHS 1000', 547958766, 'easante11@gmail.com', '9dc59f9065e8b288e3b7a570555a13eb', '2020-06-08 01:40:41', '2020-06-26 14:36:41');
 
 -- --------------------------------------------------------
 
@@ -145,7 +145,7 @@ CREATE TABLE `doctorslog` (
   `uid` int(11) DEFAULT NULL,
   `username` varchar(255) DEFAULT NULL,
   `userip` binary(16) DEFAULT NULL,
-  `loginTime` timestamp NULL DEFAULT current_timestamp(),
+  `loginTime` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `logout` varchar(255) DEFAULT NULL,
   `status` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -210,8 +210,8 @@ INSERT INTO `doctorslog` (`id`, `uid`, `username`, `userip`, `loginTime`, `logou
 CREATE TABLE `doctorspecilization` (
   `id` int(11) NOT NULL,
   `specilization` varchar(255) DEFAULT NULL,
-  `creationDate` timestamp NULL DEFAULT current_timestamp(),
-  `updationDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
+  `creationDate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `updationDate` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -295,7 +295,7 @@ CREATE TABLE `request` (
   `organ` varchar(50) NOT NULL,
   `nationality` varchar(100) NOT NULL,
   `telephone` int(50) NOT NULL,
-  `time_of_request` timestamp NOT NULL DEFAULT current_timestamp()
+  `time_of_request` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -309,7 +309,7 @@ CREATE TABLE `request2` (
   `blood_type` varchar(50) NOT NULL,
   `nationality` varchar(100) NOT NULL,
   `telephone` int(50) NOT NULL,
-  `time_of_request` timestamp NOT NULL DEFAULT current_timestamp()
+  `time_of_request` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -330,10 +330,10 @@ CREATE TABLE `tblcontactus` (
   `fullname` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `contactno` bigint(12) DEFAULT NULL,
-  `message` mediumtext DEFAULT NULL,
-  `PostingDate` timestamp NULL DEFAULT current_timestamp(),
-  `AdminRemark` mediumtext DEFAULT NULL,
-  `LastupdationDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp(),
+  `message` mediumtext,
+  `PostingDate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `AdminRemark` mediumtext,
+  `LastupdationDate` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `IsRead` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -359,8 +359,8 @@ CREATE TABLE `tblmedicalhistory` (
   `BloodSugar` varchar(200) NOT NULL,
   `Weight` varchar(100) DEFAULT NULL,
   `Temperature` varchar(200) DEFAULT NULL,
-  `MedicalPres` mediumtext DEFAULT NULL,
-  `CreationDate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `MedicalPres` mediumtext,
+  `CreationDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -389,8 +389,8 @@ CREATE TABLE `tblorgandonars` (
   `Gender` varchar(20) DEFAULT NULL,
   `Age` int(11) DEFAULT NULL,
   `Address` varchar(255) DEFAULT NULL,
-  `Message` mediumtext DEFAULT NULL,
-  `PostingDate` timestamp NOT NULL DEFAULT current_timestamp(),
+  `Message` mediumtext,
+  `PostingDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `status` int(1) DEFAULT NULL,
   `Organ` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -415,11 +415,11 @@ CREATE TABLE `tblpatient` (
   `PatientContno` bigint(10) DEFAULT NULL,
   `PatientEmail` varchar(200) DEFAULT NULL,
   `PatientGender` varchar(50) DEFAULT NULL,
-  `PatientAdd` mediumtext DEFAULT NULL,
+  `PatientAdd` mediumtext,
   `PatientAge` int(10) DEFAULT NULL,
-  `PatientMedhis` mediumtext DEFAULT NULL,
-  `CreationDate` timestamp NULL DEFAULT current_timestamp(),
-  `UpdationDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
+  `PatientMedhis` mediumtext,
+  `CreationDate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `UpdationDate` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -466,7 +466,7 @@ CREATE TABLE `userlog` (
   `uid` int(11) DEFAULT NULL,
   `username` varchar(255) DEFAULT NULL,
   `userip` binary(16) DEFAULT NULL,
-  `loginTime` timestamp NULL DEFAULT current_timestamp(),
+  `loginTime` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `logout` varchar(255) DEFAULT NULL,
   `status` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -522,7 +522,8 @@ INSERT INTO `userlog` (`id`, `uid`, `username`, `userip`, `loginTime`, `logout`,
 (67, 2, 'adwoaowusu223@gmail.com', 0x3a3a3100000000000000000000000000, '2020-06-21 18:31:45', NULL, 1),
 (68, 2, 'adwoaowusu223@gmail.com', 0x3a3a3100000000000000000000000000, '2020-06-20 13:10:15', '20-06-2020 06:45:27 PM', 1),
 (69, NULL, 'adwoaowusu223@gmail.com', 0x3a3a3100000000000000000000000000, '2020-06-25 18:36:46', NULL, 0),
-(70, 2, 'adwoaowusu223@gmail.com', 0x3a3a3100000000000000000000000000, '2020-06-25 18:37:02', NULL, 1);
+(70, 2, 'adwoaowusu223@gmail.com', 0x3a3a3100000000000000000000000000, '2020-06-25 18:37:02', NULL, 1),
+(71, 2, 'adwoaowusu223@gmail.com', 0x3a3a3100000000000000000000000000, '2020-06-26 14:35:17', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -533,13 +534,13 @@ INSERT INTO `userlog` (`id`, `uid`, `username`, `userip`, `loginTime`, `logout`,
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `fullName` varchar(255) DEFAULT NULL,
-  `address` longtext DEFAULT NULL,
+  `address` longtext,
   `city` varchar(255) DEFAULT NULL,
   `gender` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
-  `regDate` timestamp NULL DEFAULT current_timestamp(),
-  `updationDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
+  `regDate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `updationDate` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -547,7 +548,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `fullName`, `address`, `city`, `gender`, `email`, `password`, `regDate`, `updationDate`) VALUES
-(2, 'Shantel Owusu', 'Accra-Ghana', 'Accra', 'female', 'adwoaowusu223@gmail.com', '9dc59f9065e8b288e3b7a570555a13eb', '2016-12-30 05:34:39', '0000-00-00 00:00:00'),
+(2, 'Shantel Owusu', 'Accra-Ghana', 'Accra', 'female', 'adwoaowusu223@gmail.com', '5f4dcc3b5aa765d61d8327deb882cf99', '2016-12-30 05:34:39', '2020-06-26 14:35:13'),
 (3, 'Amit', 'New Delhi', 'New delhi', 'male', 'amit@gmail.com', 'f925916e2754e5e03f75dd58a5733251', '2017-01-07 06:36:53', '0000-00-00 00:00:00'),
 (4, 'Rahul Singh', 'New Delhi', 'New delhi', 'male', 'rahul@gmail.com', 'f925916e2754e5e03f75dd58a5733251', '2017-01-07 07:41:14', '0000-00-00 00:00:00'),
 (5, 'Amit kumar', 'New Delhi India', 'Delhi', 'male', 'amit12@gmail.com', 'f925916e2754e5e03f75dd58a5733251', '2017-01-07 08:00:26', '0000-00-00 00:00:00'),
@@ -687,13 +688,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `appointment`
 --
 ALTER TABLE `appointment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `bld_rec`
 --
 ALTER TABLE `bld_rec`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `b_collector`
@@ -717,7 +718,7 @@ ALTER TABLE `doctorslog`
 -- AUTO_INCREMENT for table `doctorspecilization`
 --
 ALTER TABLE `doctorspecilization`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `locations`
@@ -771,7 +772,7 @@ ALTER TABLE `tblorgandonars`
 -- AUTO_INCREMENT for table `tblpatient`
 --
 ALTER TABLE `tblpatient`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tbltranstype`
@@ -783,7 +784,7 @@ ALTER TABLE `tbltranstype`
 -- AUTO_INCREMENT for table `userlog`
 --
 ALTER TABLE `userlog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- AUTO_INCREMENT for table `users`

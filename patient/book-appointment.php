@@ -48,33 +48,36 @@ $query=mysqli_query($con,"insert into appointment(doctorSpecialization,doctorId,
 		<link rel="stylesheet" href="assets/css/styles.css">
 		<link rel="stylesheet" href="assets/css/plugins.css">
 		<link rel="stylesheet" href="assets/css/themes/theme-1.css" id="skin_color" />
+		<script src="../vendor/jquery/jquery.min.js"></script>
 		<script>
-function getdoctor(val) {
-	// $.ajax({
-	// type: "POST",
-	// url: "get_doctor.php",
-	// data:'specilizationid='+val,
-	// success: function(data){
-	// 	$("#doctor").html(data);
-	// }
-	// });
+		function getdoctor(val) {
+			$.ajax({
+				type: "GET",
+				url: "get_doctor.php",
+				data:{specilizationid: val},
+				success: function(data){
+					if(data) {
+						JSON.parse(data).forEach((doc) => {
+							$("#doctor").append("<option value='"+doc['id']+"'>"+doc['doctorName']+"</option>")
+						})
+					}
+					
+				}
+			});
 
-$.get("get_doctor.php", {"specializationid": val}, function(data) {
-	consloe.log(data)
-})
 
-}
-</script>	
+		}
+		</script>	
 
 
 <script>
 function getfee(val) {
 	$.ajax({
-	type: "POST",
+	type: "GET",
 	url: "get_doctor.php",
-	data:'doctor='+val,
+	data:{id: val},
 	success: function(data){
-		$("#fees").html(data);
+		$("#fees").val(JSON.parse(data)['docFees'])
 	}
 	});
 }
@@ -151,7 +154,7 @@ while($row=mysqli_fetch_array($ret)) //your doctorspecilization get id field? yh
 															<label for="doctor">
 																Doctors
 															</label>
-						<select name="doctor" class="form-control" id="doctor" onChange="getdoctor(this.value);" required="required">
+						<select name="doctor" class="form-control" id="doctor" onChange="getfee(this.value);" required="required">
 						<option value="">Select Doctor</option>
 						</select>
 														</div>
@@ -164,9 +167,9 @@ while($row=mysqli_fetch_array($ret)) //your doctorspecilization get id field? yh
 															<label for="consultancyfees">
 																Consultancy Fees
 															</label>
-					<select name="fees" class="form-control" id="fees"  readonly>
+					<input name="fees" class="form-control" id="fees"  readonly>
 						
-						</select>
+				
 														</div>
 														
 <div class="form-group">
