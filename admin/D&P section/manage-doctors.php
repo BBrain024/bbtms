@@ -4,7 +4,7 @@ error_reporting(0);
 include('include/config.php');
 include('include/checklogin.php');
 check_login();
-
+// This is the code oo
 
 if(isset($_GET['del']))
 		  {
@@ -83,13 +83,18 @@ if(isset($_GET['del']))
 <?php
 $sql=mysqli_query($con,"select * from doctors");
 $cnt=1;
-while($row=mysqli_fetch_array($sql))
+while($row=mysqli_fetch_array($sql)) 
 {
 ?>
 
 											<tr>
 												<td class="center"><?php echo $cnt;?>.</td>
-												<td class="hidden-xs"><?php echo $row['specilization'];?></td>
+												<td class="hidden-xs"><?php 
+													$sql1=mysqli_query($con,"select * from doctorspecilization where id = ".$row['specilization']);
+													$item = mysqli_fetch_assoc($sql1);
+
+
+												echo $item['specilization'];?></td>
 												<td><?php echo $row['doctorName'];?></td>
 												<td><?php echo $row['creationDate'];?>
 												</td>

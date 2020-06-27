@@ -2,12 +2,11 @@
 session_start();
 error_reporting(0);
 include('includes/config 2.php');
-include('includes/config.php');
 if(isset($_POST['send']))
   {
 $blood=$_POST['blood'];
 $nat=$_POST['nat'];
-$contactno='233'.$_POST['contactno'];
+$contactno=$_POST['contactno'];
 $sql="INSERT INTO  request2(blood_type,nationality,telephone) VALUES(:blood,:nat,:contactno)";
 $query = $dbh->prepare($sql);
 $query->bindParam(':blood',$blood,PDO::PARAM_STR);
@@ -109,7 +108,7 @@ $error="Something went wrong. Please try again";
                                       <?php 
 
                                       $sql = "SELECT * from  tblbloodgroup ";
-                                      $query = $con-> prepare($sql);
+                                      $query = $dbh2-> prepare($sql);
                                       $query->execute();
                                       $results=$query->fetchAll(PDO::FETCH_OBJ);
                                       $cnt=1;

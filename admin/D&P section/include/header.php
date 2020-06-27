@@ -26,14 +26,26 @@
 							</li>
 						
 						
-							<li class="dropdown current-user"  class="dropdowncurrent-user">
-								<a href ="logout.php" class="dropdown-toggle" data-toggle="dropdown">
+							<li class="dropdown current-user"  class=>
+								<a href class="dropdown-toggle" data-toggle="dropdown">
 									<img src="assets/images/images.jpg" > <span class="username">
 
-
-
 			Admin
+									<i class="ti-angle-down"></i></i></span>
+								</a>
+								<ul class="dropdowncurrent-user">
 									
+								
+									<li>
+										<a href="change-password.php">
+											Change Password
+										</a>
+									</li>
+									<li>
+										<a href="logout.php">
+											Log Out
+										</a>
+									</li>
 								</ul>
 							</li>
 							<!-- end: USER OPTIONS DROPDOWN -->

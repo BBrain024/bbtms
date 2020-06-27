@@ -1,12 +1,9 @@
-/*::-webkit-scrollbar{
-	display: none;
-}*/
 *{
 	box-sizing: border-box;
 }
 body{
 	margin: 0;
-	background-image:url(../images/vol.jpg);
+	background-image:url(../images/vol2.jpg);
 	background-size: 1368px 900px;
 	overflow: hidden;
 }

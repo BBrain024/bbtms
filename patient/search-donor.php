@@ -76,7 +76,7 @@ include('includes/config.php');
 <div class="font-italic">Blood Group<span style="color:red">*</span> </div>
 <div><select name="bloodgroup" class="form-control" required><option selected="selected" value="" hidden="">Select</option>
 <?php $sql = "SELECT * from  tblbloodgroup ";
-$query = $dbh -> prepare($sql);
+$query = $con -> prepare($sql);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 $cnt=1;
@@ -114,7 +114,7 @@ $status=1;
 $bloodgroup=$_POST['bloodgroup'];
 $location=$_POST['location'];
 $sql = "SELECT * from tblblooddonars where (status=:status and BloodGroup=:bloodgroup) ||  (Address=:location)";
-$query = $dbh -> prepare($sql);
+$query = $con -> prepare($sql);
 $query->bindParam(':status',$status,PDO::PARAM_STR);
 $query->bindParam(':bloodgroup',$bloodgroup,PDO::PARAM_STR);
 $query->bindParam(':location',$location,PDO::PARAM_STR);

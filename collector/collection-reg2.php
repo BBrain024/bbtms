@@ -10,8 +10,7 @@ $tag=$_POST['tag'];
 $Cdate=$_POST['Cdate'];
 $Edate=$_POST['Edate'];
 $Tele=$_POST['Tele'];
-$status=1;
-$sql="INSERT INTO  org_rec(Name_of_Donor,Name_of_Collector,Place_of_Collection,Organ_Type,Organ_Tag_number,Date_of_collection,Date_of_Expiry,tele,status) VALUES(:Dname,:Cname,:Pcol,:Otype,:tag,:Cdate,:Edate,:Tele:status)";
+$sql="INSERT INTO org_rec (Name_of_Donor,Name_of_Collector,Place_of_Collection,Organ_Type,Organ_Tag_number,Date_of_collection,Date_of_Expiry,tele) VALUES(:Dname,:Cname,:Pcol,:Otype,:tag,:Cdate,:Edate,:Tele)";
 $query = $dbh->prepare($sql);
 $query->bindParam(':Dname',$Dname,PDO::PARAM_STR);
 $query->bindParam(':Cname',$Cname,PDO::PARAM_STR);
@@ -21,7 +20,6 @@ $query->bindParam(':tag',$tag,PDO::PARAM_STR);
 $query->bindParam(':Cdate',$Cdate,PDO::PARAM_STR);
 $query->bindParam(':Edate',$Edate,PDO::PARAM_STR);
 $query->bindParam(':Tele',$Tele,PDO::PARAM_STR);
-$query->bindParam(':status',$status,PDO::PARAM_STR);
 $query->execute();
 $lastInsertId = $dbh->lastInsertId();
 if($lastInsertId)
@@ -98,7 +96,7 @@ $error="Something went wrong. Please try again";
 
 <div class="loginbox">
    <h1>Register</h1>
-		<form method="post" action="../Organ_reserves.php" style="width: 325px;">
+		<form method="post" action="collection-reg2.php" style="width: 325px;">
 	<table>
 			<tbody><tr>
 				<td>Name of Donor:<span style="color:red">*</span><br><br><br></td>

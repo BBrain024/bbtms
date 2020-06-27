@@ -6,7 +6,7 @@ if(isset($_POST['send']))
   {
 $organ=$_POST['organ'];
 $nat=$_POST['nat'];
-$contactno='+233'.$_POST['contactno'];
+$contactno=.$_POST['contactno'];
 $sql="INSERT INTO  request(organ,nationality,telephone) VALUES(:organ,:nat,:contactno)";
 $query = $dbh->prepare($sql);
 $query->bindParam(':organ',$organ,PDO::PARAM_STR);
@@ -16,7 +16,7 @@ $query->execute();
 $lastInsertId = $dbh->lastInsertId();
 if($lastInsertId)
 {
-$msg="Query Sent. We will contact you shortly";
+$msg="Request Sent. We will contact you shortly";
 }
 else 
 {

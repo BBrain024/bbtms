@@ -19,7 +19,7 @@
 .menu-area li{
   display: inline-block;
   margin: 0 4px;
-  background-color: tomato;
+  background-color: #3391E7;
   border-radius: 20px;
 }
 .menu-area li:hover{
@@ -32,7 +32,7 @@
   letter-spacing: 2px;
 }
 .menu-area li.active a{
-  color: tomato;
+  color: #3391E7;
 }
 .menu-area li a:hover{
   color:black;
@@ -56,12 +56,11 @@
 }
 .welcome2-text {
 margin-left:210px;
-
-	}
+}
 </style>
 </head>
 <body>
-	<header class="fix"><video class="vid-bg" autoplay  loop  muted src="videos/smoke.mp4" >
+	<header class="fix"><video class="vid-bg" autoplay  loop  muted src="" >
 </video>
 <div class="nav-area">
 <div class="logo">Blood Bank & Organ Transplanting  System</div>
@@ -70,7 +69,7 @@ margin-left:210px;
 </div>
 	</div>
 	<div class="welcome2-text">
-		       <h2>Please Which type of search?</h2>
+		       <h2>Please which type of search?</h2>
 		<button class="btn btn-1"><a href="search-donor.php">Blood</a> </button>
 		<button class="btn btn-2"><a href="search-donor 2.php">Organ</a> </button>
 	</div>

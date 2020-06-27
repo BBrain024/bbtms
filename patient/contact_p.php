@@ -9,13 +9,13 @@ $email=$_POST['email'];
 $contactno=$_POST['contactno'];
 $message=$_POST['message'];
 $sql="INSERT INTO  tblcontactusquery(name,EmailId,ContactNumber,Message) VALUES(:name,:email,:contactno,:message)";
-$query = $dbh->prepare($sql);
+$query = $con->prepare($sql);
 $query->bindParam(':name',$name,PDO::PARAM_STR);
 $query->bindParam(':email',$email,PDO::PARAM_STR);
 $query->bindParam(':contactno',$contactno,PDO::PARAM_STR);
 $query->bindParam(':message',$message,PDO::PARAM_STR);
 $query->execute();
-$lastInsertId = $dbh->lastInsertId();
+$lastInsertId = $con->lastInsertId();
 if($lastInsertId)
 {
 $msg="Query Sent. We will contact you shortly";
@@ -80,7 +80,6 @@ $error="Something went wrong. Please try again";
 
 <body>
 
-    <?php include('');?>
 
     <!-- Page Content -->
     <div class="container">
@@ -138,7 +137,7 @@ $error="Something went wrong. Please try again";
                     <?php 
 $pagetype=$_GET['type'];
 $sql = "SELECT Address,EmailId,ContactNo from tblcontactusinfo";
-$query = $dbh -> prepare($sql);
+$query = $con -> prepare($sql);
 $query->bindParam(':pagetype',$pagetype,PDO::PARAM_STR);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);

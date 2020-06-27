@@ -5,8 +5,8 @@ include('include/config.php');
 include('include/checklogin.php');
 check_login();
 
-if(isset($_POST['submit']))
-{	$docspecialization=$_POST['Doctorspecialization'];
+if(isset($_POST['submit'])){
+$docspecialization=$_POST['Doctorspecialization'];
 $docname=$_POST['docname'];
 $docaddress=$_POST['clinicaddress'];
 $docfees=$_POST['docfees'];
@@ -119,10 +119,10 @@ error:function (){}
 							<select name="Doctorspecialization" class="form-control" required="true">
 																<option value="">Select Specialization</option>
 <?php $ret=mysqli_query($con,"select * from doctorspecilization");
-while($row=mysqli_fetch_array($ret))
+while($row=mysqli_fetch_array($ret)) // now add a doctor kk 
 {
 ?>
-																<option value="<?php echo htmlentities($row['specilization']);?>">
+																<option value="<?php echo htmlentities($row['id']);?>">
 																	<?php echo htmlentities($row['specilization']);?>
 																</option>
 																<?php } ?>

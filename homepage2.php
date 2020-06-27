@@ -41,7 +41,7 @@ include('includes/configg.php');
             <li class="active"><a href="homepage2.php">Home</a></li>
             
             <li><a href="patient/contact_p.php">contact</a></li>
-            <li><a href="">Request</a></li>
+            <li><a href="patient/choose2.php">Request</a></li>
                   <li><a href="patient/choose.php">Volunteers</a></li>
                   <li><a href="patient/logout2.php">Log out</a></li>
 

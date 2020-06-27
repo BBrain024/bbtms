@@ -1,28 +1,24 @@
 <?php
 include('includes/configg.php');
-if(!empty($_POST["specilizationid"])) 
+if(!empty($_GET["specilizationid"])) 
 {
 
- $sql=mysqli_query($con,"select doctorName from doctors where Spec_id='".$_POST['specilizationid']."'");?>
- <option selected="selected">Select Doctor </option>
- <?php
- while($row=mysqli_fetch_array($sql))
- 	{?>
-  <option value="<?php echo htmlentities($row['doctorName']); ?>"><?php echo htmlentities($row['doctorName']); ?></option>
-  <?php
-}
+$sql=mysqli_query($con,"select id, doctorName from doctors where specilization='".$_GET['specilizationid']."'");
+
+echo json_encode(mysqli_fetch_all($sql, MYSQLI_ASSOC));
+
+
+
 }
 
 
-if(!empty($_POST["doctor"])) 
+if(!empty($_GET["id"])) 
 {
 
- $sql=mysqli_query($con,"select docFees from doctors where id='".$_POST['doctor']."'");
- while($row=mysqli_fetch_array($sql))
- 	{?>
- <option value="<?php echo htmlentities($row['docFees']); ?>"><?php echo htmlentities($row['docFees']); ?></option>
-  <?php
-}
+ $sql=mysqli_query($con,"select docFees from doctors where id='".$_GET['id']."'");
+ 
+ echo json_encode(mysqli_fetch_assoc($sql));
+
 }
 
 ?>
